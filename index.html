@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(white,rgb(129, 129, 245));
+        }
+        button {
+            color: rgb(248, 248, 248);
+            background-color: blueviolet;
+            width: 150px;
+            height: 50px;
+            justify-content: center;
+            transition: .2s linear;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: black;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #image {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center"> <img id="image" src="BAUET.png" alt="">
+        <h1 align="center" style="color: brown;">Bangladesh Army University of Engineering and Technology</h1>
+    </div>
+
+    <div align="center">
+        <button type="button" id="btn"
+            onclick='document.getElementById ("image") .style.display="block" ; document.getElementById ("btn");'
+            style="font-size: 20px;">Click</button>
+    </div>
+
+    <h1 style="text-align:center;" align="center">JavaScript Implementation</h1>
+    <p align="center">JavaScript can change HTML attribute values.</p>
+    <p align="center">In this case JavaScript changes the value of the src (source) attribute of an
+        image.</p>
+    <div align="center">
+        <button onclick="document.getElementById('myImage').src='on.png'">Turn
+            on the light</button>
+        <img id="myImage" src="off.png" style="width:200px">
+        <button onclick="document.getElementById('myImage').src='off.png'">Turn
+            off the light</button>
+    </div>
+    <h1 align="center">JavaScript Dates</h1>
+    <h2 align="center">Using new Date(<p id="demo1" align="center"> </p>)</h2>
+    
+
+    <h1 align="center">JavaScript Validation</h1>
+    <div align="center"></div>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" align="center">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+
+
+    <script>
+        const d = new Date();
+        document.getElementById("demo1").innerHTML = d;
+
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("demo2").innerHTML =
+            greeting;
+
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
